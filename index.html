@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://unpkg.com/dexie/dist/dexie.js"></script>
+
+</head>
+
+<body>
+	<script type="module">
+		// var db = new Dexie("ProjectsDB");
+		// db.version(1).stores({
+		// 	Roadmap: `epics,color,startDate,finishDate`,
+		// 	kanban: `backlog,inProgress,done`,
+		// 	bugs: `opened,closed`,
+		// 	reports: `id,name,age`,
+		// });
+		// // set 
+		// await db.Roadmap.bulkPut([{
+		// 	epics: "UX design",
+		// 	color: "red",
+		// 	startDate: "20 february",
+		// 	finishDate: "1 juin"
+		// }])
+
+		// // get spesific
+		// let [data] = await db.Roadmap.bulkGet(["UX design"]);// primary key
+		// // console.log(data.color);
+
+		// // get all 
+		// let all = await db.Roadmap.toArray()
+		// // console.log(all);
+
+
+		//get alll the databae
+		// const dataBases=await indexedDB.databases()
+		// console.log(dataBases);
+
+
+		// open database and close it
+		// var db = await new Dexie("ProjectsDB").open();
+		//get version
+		// console.log("Version", db.verno);
+		//get all stores
+                // console.log("Tables", db.tables)
+          	// db.close();
+
+		//delete a databese
+		// Dexie.delete('ProjectsDB');
+
+
+
+
+
+
+//create db an manipulate indexedDB
+
+
+// const db = new Dexie("friends");
+// db.version(1).stores({
+//   friends: "id, name, age"
+// });
+// (async () => {
+//   await db.friends.put({
+//     id: 1,
+//     name: "jane",
+//     age: 78
+//   });
+//   await db.friends.put({
+//     id: 2,
+//     name: "mary",
+//     age: 76
+//   });
+// })()
+
+//add property
+
+// const db = new Dexie("friends");
+// db.version(1).stores({
+//   friends: "id, name, age"
+// });
+// (async () => {
+//   await db.friends
+//     .orderBy('name')
+//     .modify({
+//       isBigfoot: 100
+//     });
+// })()
+
+
+// /change all property
+
+// const db = new Dexie("friends");
+// db.version(1).stores({
+//   friends: "id, name, age"
+// });
+// (async () => {
+//   await db.friends
+//     .orderBy('name')
+//     .modify(friend => {
+//       friend.name = "marwen";
+//     });
+// })()
+
+// /change one property
+
+// const db = new Dexie("friends");
+// db.version(1).stores({
+//   friends: "id, name, age"
+// });
+// (async () => {
+//   await db.friends
+//     .where('age').equals(76)
+//     .modify(friend => {
+//       friend.name = "ikram";
+//     });
+// })()
+
+//delete all property
+// const db = new Dexie("friends");
+// db.version(1).stores({
+//   friends: "id, name, age"
+// });
+// (async () => {
+//   await db.friends
+//     .orderBy('name')
+//     .delete();
+// })()
+
+// delete specific property
+// const db = new Dexie("friends");
+// db.version(1).stores({
+//   friends: "id, name, age"
+// });
+// (async () => {
+//   await db.friends
+//     .where('age').equals(76)
+//     .delete();
+// })()
+
+
+// add other stores and delete stores
+// change the version and recreate the database
+
+
+
+	</script>
+
+</body>
+
+</html>
